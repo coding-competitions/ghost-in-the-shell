@@ -1,0 +1,7 @@
+title: Ghost in the Shell
+description: A coding competition
+theme: jekyll-theme-minima
+url: https://coding-competitions.github.io/ghost-in-the-shell
+collections:
+  bots:
+    output: true
