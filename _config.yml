@@ -1,6 +1,6 @@
 title: Ghost in the Shell
 description: A coding competition
-theme: jekyll-theme-minima
+theme: jekyll-theme-hacker
 url: https://coding-competitions.github.io/ghost-in-the-shell
 collections:
   bots:
