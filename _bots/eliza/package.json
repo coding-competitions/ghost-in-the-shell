@@ -1,0 +1,15 @@
+{
+  "name": "eliza",
+  "version": "1.0.0",
+  "description": "Eliza for IRC",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pswg",
+  "license": "ISC",
+  "dependencies": {
+    "elizabot": "0.0.2",
+    "irc-framework": "^4.4.0"
+  }
+}

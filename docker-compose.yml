@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  # ----- CORE SERVICES -----
+  ircd:
+    image: inspircd/inspircd-docker
+    ports:
+      - "6667:6667"
+      - "6697:6697"
+    restart: always
+  web:
+    image: thelounge/thelounge
+    ports:
+      - "9000:9000"
+    restart: always
+    volumes:
+      - type: bind
+        source: ./thelounge
+        target: /var/opt/thelounge
+  # ----- BOTS -----
+  eliza:
+    build: ./_bots/eliza
+    environment:
+      - IRC_HOST=ircd
+    restart: always
