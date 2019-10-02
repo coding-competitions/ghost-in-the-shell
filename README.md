@@ -10,9 +10,32 @@ The internet is a strange place full of dark and mysterious beings. When you tal
 user online, you never know exactly who or *what* is on the other side of the monitor. Some
 servers could in fact be 👻<span class="ghp-haunted">haunted</span>👻.
 
+There's 
+
 ## Challenge
 
-Write a complete program capable of mimicking naturalistic human conversation via [IRC][1].
+Write a complete program capable of mimicking naturalistic human conversation via [IRC][1]. Your
+program (bot) must be packaged within a Docker container for easy deployment.
+
+The submission must be accompanied by a `README.md` file which contains details about the design
+and purpose of your chatbot, with a yaml header in the following format:
+
+    ---
+    layout: entry
+    title: { title / nick }
+    author: { github username }
+    lang: { language }
+    ---
+
+    { description of the entry }
+
+    ## Usage
+
+    { description of commands or tips for interacting with the bot }
+
+    ## Design
+
+    { description of various components / tools used }
 
 You may use any word lists / lexicons / corpora data you like to parse inputs or construct
 responses, but all data used must be freely available and open to inspection by others by download,
@@ -20,8 +43,8 @@ or the data must be included as source code in the submission (and should be kep
 size). This includes for example,
 
   - [Princeton's WordNet Lexicon][2]
-  - [Open Source Shakespeare Database][3] 
-  - A log of a given Twitter user's tweets.
+  - [Open Source Shakespeare Database][3]
+  - A log of a given Twitter user's tweets
 
 However, this would *exclude* any data that is not freely available or cannot be readily inspected
 by others, such as:
@@ -35,7 +58,8 @@ bot.
 You may additionally use any libraries beyond the core libraries of your platform, but you must
 explain how each library is used by your bot.
 
-Your bot must be packaged within a Docker container for deployment.
+Your chat bot must avoid spamming users or channels and it should try to avoid getting into an
+infinite loop chatting with other bots.
 
 ### Utilities
 
@@ -68,7 +92,6 @@ To tear down any artifacts from the development environment, use
 
     docker-compose down
 
-
 ## Submissions
 
 To submit an entry to this competition, start off by forking this repo. Create 
@@ -85,7 +108,27 @@ Entries must be submitted as a pull request on or before
 
 ## Judging
 
+A submission may be rejected if it fails to satisfy any of the requirements 
+described above, if the moderators of the competition are unable to compile or 
+run the program, or if the entry appears to be copied from other entries 
+without any significant modification. For additional guidelines, see 
+[Judging](Judging.md).
+
+This is a **subjective** competition, meaning the winner will be decided by 
+popular vote. Votes will be cast via an online poll. A link to the poll will be
+provided when the voting session begins. Any eligible voter is welcome vote on
+any accepted entry, *including their own*.
+
+The final vote count shall be taken on **Monday, November 4, 2019**. Votes
+submitted after this date shall not be counted.
+
+The entry that receives the most votes shall be declared the winner. In the 
+event of a tie, the entry with the lower golf score shall be declared the 
+winner.
+
 ## Awards
+
+*TBD*.
 
   [1]: https://en.wikipedia.org/wiki/Internet_Relay_Chat
   [2]: https://wordnet.princeton.edu/
