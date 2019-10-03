@@ -20,7 +20,7 @@ Write a complete program capable of mimicking naturalistic human conversation vi
 program (bot) must be packaged within a Docker container for easy deployment.
 
 The submission must be accompanied by a `README.md` file which contains details about the design
-and purpose of your chatbot, with a yaml header in the following format:
+and purpose of your chat bot, with a yaml header in the following format:
 
     ---
     layout: entry
@@ -38,8 +38,6 @@ and purpose of your chatbot, with a yaml header in the following format:
     ## Design
 
     { description of various components / tools used }
-
-See the the [ELIZA](_bots/eliza/README) sample bot.
 
 You may use any word lists / lexicons / corpora data you like to parse inputs or construct
 responses, but all data used must be freely available and open to inspection by others by download,
@@ -62,8 +60,10 @@ bot.
 You may additionally use any libraries beyond the core libraries of your platform, but you must
 explain how each library is used by your bot.
 
-Your chatbot must identify itself as a bot using the `+B` user mode, must avoid spamming users or
+Your chat bot must identify itself as a bot using the `+B` user mode, must avoid spamming users or
 channels, and it should try to avoid getting into an infinite loop chatting with other bots.
+
+See the the [ELIZA](bots/eliza/README) sample bot.
 
 ### Utilities
 
