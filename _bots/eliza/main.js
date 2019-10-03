@@ -2,7 +2,7 @@ const IRC = require("irc-framework");
 const ElizaBot = require('elizabot')
 
 const bots = {};
-const lastGeneralMessage = 0;                       // Timestamp for sending a general message
+let lastGeneralMessage = 0;                         // Timestamp for sending a general message
 function createBot(key, reply) {
     const bot = new ElizaBot();                     // Create a new bot to respond to messages
     const msg = bot.getInitial();                   // Get initial message for user / channel
@@ -53,14 +53,20 @@ client.on('message', function(event) {              // When a message is receive
         if (key in bots) {                          // Is there an existing session for this user?
             respondBot(key, message, reply);        // Continue previous session
         } else {
-            createBot(key, reply);                  // Start a new session
+            client.whois(event.nick, function(w) {  // Get info about the sender of this message
+                if (!w.bot) {                       // If sender is not a bot
+                    createBot(key, reply);          // Start a new session
+                }
+            });
         }
     } else if (regexp.test(event.message)) {        // DId someone mention me?
         const now = Date.now();
         if (now - lastGeneralMessage > 6e5) {       // Only send general messages once every 10 minutes
             lastGeneralMessage = now;
             event.reply(
-                'Hi, I\'m ELIZA, your personal digital therapist! To start a session send me a direct message or type \x11/query ELIZA Hi\x11.');
+                'Hi, I\'m ELIZA, your personal digital therapist! ' +
+                'To start a session send me a direct message or type ' +
+                '\x11/query ELIZA Hi\x11.');
         }
     }
     cleanupBots();                                  // Cleanup old sessions
@@ -68,7 +74,8 @@ client.on('message', function(event) {              // When a message is receive
 
 client.on('connected', function(info) {             // When connected to the server
     console.log('connected as', info.nick);
-    client.join(channel);
+    client.join(channel);                           // Auto join #general channel
+    client.mode(info.nick, '+B');                   // Identify self as a bot
 })
 
 client.on('close', function() {                     // When connection to the server is lost
