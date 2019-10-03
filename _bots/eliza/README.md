@@ -49,21 +49,21 @@ if the user says, "I am sad", ELIZA might respond, "I am sorry to hear that you 
 She has very basic contextual memory of previous topics, allowing for some degree of conversational
 cohesiveness. Here's an example conversation:
 
- > **human**: Hi
- > **ELIZA**: Please tell me what's been bothering you.
- > **human**: I have a headache
- > **ELIZA**: You say you have a headache ?
- > **human**: That's right
- > **ELIZA**: Tell me more about that.
- > **human**: I feel tired
- > **ELIZA**: Tell me more about such feelings.
- > **human**: I could not sleep last night
- > **ELIZA**: Do you say you could not sleep last night for some special reason ?
- > **human**: the room was too hot
- > **ELIZA**: What does that suggest to you ?
- > **human**: I should have turned on the air
- > **ELIZA**: That's quite interesting.
- > **human**: Bye
+ > **human**: Hi  
+ > **ELIZA**: Please tell me what's been bothering you.  
+ > **human**: I have a headache  
+ > **ELIZA**: You say you have a headache ?  
+ > **human**: That's right  
+ > **ELIZA**: Tell me more about that.  
+ > **human**: I feel tired  
+ > **ELIZA**: Tell me more about such feelings.  
+ > **human**: I could not sleep last night  
+ > **ELIZA**: Do you say you could not sleep last night for some special reason ?  
+ > **human**: the room was too hot  
+ > **ELIZA**: What does that suggest to you ?  
+ > **human**: I should have turned on the air  
+ > **ELIZA**: That's quite interesting.  
+ > **human**: Bye  
  > **ELIZA**: Goodbye.  This was really a nice talk.
 
 The full lexicon of ELIZA's keywords and possible responses can be found here:
