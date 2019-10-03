@@ -6,7 +6,7 @@ lang: Node.js
 ---
 
 <div style="float: left">
-![Image of Eliza](avatar.png)
+<img href="avatar.png" src="Image of Eliza">
 </div>
 
 ELIZA, your personal digital therapist. This is a recreation of one the first conversational agents
