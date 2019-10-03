@@ -11,9 +11,8 @@ user online, you never know exactly who or *what* is on the other side of the mo
 servers could in fact be
 👻<span class="ghp-haunted"><i>h</i><i>a</i><i>u</i><i>n</i><i>t</i><i>e</i><i>d</i></span>👻.
 
-You're going to create a program to haunt a server yourself in the form a chat bot.
-
-Make it <span class="ghp-haunted"><i>S</i><i>P</i><i>O</i><i>O</i><i>P</i><i>Y</i><i>™</i></span>!
+You're going to create a program to haunt a server yourself in the form a chat bot. Make it 
+<span class="ghp-haunted"><i>S</i><i>P</i><i>O</i><i>O</i><i>P</i><i>Y</i><i>™</i><i>!</i></span>
 
 ## Challenge
 
