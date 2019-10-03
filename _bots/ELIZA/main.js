@@ -1,5 +1,5 @@
-const IRC = require("irc-framework");
-const ElizaBot = require('elizabot')
+const IRC = require("./node_modules/irc-framework/src");
+const ElizaBot = require('./node_modules/elizabot/elizabot')
 
 const bots = {};
 const generalMsg = 

@@ -11,16 +11,17 @@ user online, you never know exactly who or *what* is on the other side of the mo
 servers could in fact be
 👻<span class="ghp-haunted"><i>h</i><i>a</i><i>u</i><i>n</i><i>t</i><i>e</i><i>d</i></span>👻.
 
-You're going to create a program to haunt a server yourself in the form a chat bot. Make it 
-<span class="ghp-haunted"><i>S</i><i>P</i><i>O</i><i>O</i><i>P</i><i>Y</i><i>™</i><i>!</i></span>
+You're going to create a program to haunt a server in the form a chat bot.
 
 ## Challenge
 
-Write a complete program capable of mimicking naturalistic human conversation via [IRC][1]. It
-should be *reasonably* convincing as  Your
-application (bot) must be packaged within a [Docker](Docker.md) container for easy deployment.
+Write a complete program capable of interacting with users over [IRC][1]. It may either attempt to
+mimic human conversation or just be
+<span class="ghp-haunted"><i>S</i><i>P</i><i>O</i><i>O</i><i>P</i><i>Y</i><i>™</i><i>!</i></span>
 
-See the the [ELIZA](bots/eliza/README) sample bot.
+Your chat bot must identify itself as a bot using the `+B` user mode, must avoid spamming users or
+channels, and it should try to avoid getting into an infinite loop chatting with other bots. It
+must also be packaged within a [Docker](Docker.md) container for easy deployment.
 
 The submission must be accompanied by a `README.md` file which contains details about the design
 and purpose of your chat bot, with a yaml header in the following format:
@@ -42,29 +43,7 @@ and purpose of your chat bot, with a yaml header in the following format:
 
     { description of various components / tools used }
 
-You may use any word lists / lexicons / corpora data you like to parse inputs or construct
-responses, but all data used must be freely available and open to inspection by others by download,
-or the data must be included as source code in the submission (and should be kept to a reasonable
-size). This includes for example,
-
-  - [Princeton's WordNet Lexicon][2]
-  - [Open Source Shakespeare Database][3]
-  - A log of a given Twitter user's tweets
-
-However, this would *exclude* any data that is not freely available or cannot be readily inspected
-by others, such as,
-
-  - [IBM's Watson][4] or other closed-source or cloud-hosted AI.
-  - [Mechanical Turk][5]-type solutions that offload work to human.
-
-Whatever data is used, you must explain were that data came from and how that data is used by your
-bot.
-
-You may additionally use any libraries beyond the core libraries of your platform, but you must
-explain how each library is used by your bot.
-
-Your chat bot must identify itself as a bot using the `+B` user mode, must avoid spamming users or
-channels, and it should try to avoid getting into an infinite loop chatting with other bots.
+See the the [ELIZA](bots/ELIZA/README) sample bot.
 
 ### Utilities
 
@@ -100,17 +79,33 @@ To tear down any artifacts from the development environment, use
 
 ## Submissions
 
-To submit an entry to this competition, start off by forking this repo. Create 
-a new subdirectory under `_bots/` to house your entry, and develop your 
-code under there. Write a `README.md` file which includes the relevant 
-information as described in the [Challenge](#Challenge). Once you're satisfied 
-with the results, submit a pull request to have your entry merged in with the 
-others.
+To submit an entry to this competition, start off by forking this repo. Create a new subdirectory
+under `_bots/` to house your entry, and develop your code under there.
+
+You may use any word lists / lexicons / corpora data you like to train AI, to parse inputs or
+construct responses, but all data used must be freely available and open to inspection by others by
+download, or the data must be included as source code in the submission (and should be kept to a
+reasonable size). This includes for example,
+
+  - [Princeton's WordNet Lexicon][2]
+  - [Open Source Shakespeare Database][3]
+  - A log of a given Twitter user's tweets
+
+However, this would *exclude* any data that is not freely available or cannot be readily inspected
+by others, such as,
+
+  - [IBM's Watson][4] or other closed-source or cloud-hosted AI.
+  - [Mechanical Turk][5]-type solutions that offload work to human.
+
+Whatever data is used, you must explain were that data came from and how that data is used by your
+bot.
+
+You may additionally use any libraries beyond the core libraries of your platform, but you must
+explain how each library is used by your bot.
 
 Contestants may submit multiple entries.
 
-Entries must be submitted as a pull request on or before
-**Wednesday, October 30, 2019**.
+Entries must be submitted as a pull request on or before **Wednesday, October 30, 2019**.
 
 ## Judging
 
