@@ -8,9 +8,11 @@
 
 The internet is a strange place full of dark and mysterious beings. When you talk with another
 user online, you never know exactly who or *what* is on the other side of the monitor. Some
-servers could in fact be 👻<span class="ghp-haunted">haunted</span>👻.
+servers could in fact be
+👻<span class="ghp-haunted"><i>h</i><i>a</i><i>u</i><i>n</i><i>t</i><i>e</i><i>d</i></span>👻.
 
-There's 
+You're going to create a program to haunt a server yourself in the form a chat bot. Make it
+👻<span class="ghp-haunted"><i>S</i><i>P</i><i>O</i><i>O</i><i>P</i><i>Y</i><i>™</i></span>👻!
 
 ## Challenge
 
@@ -64,7 +66,8 @@ infinite loop chatting with other bots.
 ### Utilities
 
 To generate an environment for local testing and development you may use the provided
-`docker-compose.yml` file. If you're not familiar with Docker or Docker Compose, see [Docker][6].
+`docker-compose.yml` file. If you're not familiar with Docker or Docker Compose, see
+[Docker](Docker.md).
 
 To start the development environment, use
 
@@ -135,5 +138,4 @@ winner.
   [3]: http://www.opensourceshakespeare.org/
   [4]: https://www.ibm.com/watson
   [5]: https://en.wikipedia.org/wiki/The_Turk
-  [6]: Docker.md
   [7]: https://irssi.org/

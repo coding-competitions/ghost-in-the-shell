@@ -11,6 +11,9 @@
     line-height: 1;
     display: inline-block
 }
+@for $i from 1 to 10 {
+    .results div:nth-child(#{$i}) { animation-delay: $i * 0.1s; }
+}
 
 @keyframes text-shadow {
     0% {  
