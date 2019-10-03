@@ -60,8 +60,8 @@ bot.
 You may additionally use any libraries beyond the core libraries of your platform, but you must
 explain how each library is used by your bot.
 
-Your chat bot must avoid spamming users or channels and it should try to avoid getting into an
-infinite loop chatting with other bots.
+Your chatbot must identify itself as a bot using the `+B` user mode, must avoid spamming users or
+channels, and it should try to avoid getting into an infinite loop chatting with other bots.
 
 ### Utilities
 
