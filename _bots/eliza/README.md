@@ -5,9 +5,7 @@ author: pswg
 lang: Node.js
 ---
 
-<div style="float: left">
-<img href="avatar.png" src="Image of Eliza">
-</div>
+<div style="float: right"><img src="avatar.png" src="Image of Eliza"></div>
 
 ELIZA, your personal digital therapist. This is a recreation of one the first conversational agents
 ever written. 
