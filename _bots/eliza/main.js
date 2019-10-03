@@ -2,7 +2,11 @@ const IRC = require("irc-framework");
 const ElizaBot = require('elizabot')
 
 const bots = {};
-let lastGeneralMessage = 0;                         // Timestamp for sending a general message
+const generalMsg = 
+    'Hi, I\'m ELIZA, your personal digital therapist! ' +
+    'To start a session send me a direct message or type ' +
+    '\x11/query ELIZA Hi\x11.';
+let generalMsgTs = 0;                         // Timestamp for sending a general message
 function createBot(key, reply) {
     const bot = new ElizaBot();                     // Create a new bot to respond to messages
     const msg = bot.getInitial();                   // Get initial message for user / channel
@@ -61,12 +65,9 @@ client.on('message', function(event) {              // When a message is receive
         }
     } else if (regexp.test(event.message)) {        // DId someone mention me?
         const now = Date.now();
-        if (now - lastGeneralMessage > 6e5) {       // Only send general messages once every 10 minutes
-            lastGeneralMessage = now;
-            event.reply(
-                'Hi, I\'m ELIZA, your personal digital therapist! ' +
-                'To start a session send me a direct message or type ' +
-                '\x11/query ELIZA Hi\x11.');
+        if (now - generalMsgTs > 6e4) {             // Only send general messages once every minute
+            generalMsgTs = now;
+            delaySend(event.reply, generalMsg);
         }
     }
     cleanupBots();                                  // Cleanup old sessions
@@ -84,4 +85,10 @@ client.on('close', function() {                     // When connection to the se
 
 client.on('join', function(info) {                  // When someone joins a channel
     console.log(info.nick, 'joined channel', info.channel);
+    if (info.nick == nick) {
+        delaySend(                                  // Announce myself on the new channel
+            function(msg) {
+                client.sendMessage('/msg', info.channel, msg);
+            }, generalMsg);
+    }
 });

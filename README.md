@@ -16,8 +16,11 @@ You're going to create a program to haunt a server yourself in the form a chat b
 
 ## Challenge
 
-Write a complete program capable of mimicking naturalistic human conversation via [IRC][1]. Your
-program (bot) must be packaged within a Docker container for easy deployment.
+Write a complete program capable of mimicking naturalistic human conversation via [IRC][1]. It
+should be *reasonably* convincing as  Your
+application (bot) must be packaged within a [Docker](Docker.md) container for easy deployment.
+
+See the the [ELIZA](bots/eliza/README) sample bot.
 
 The submission must be accompanied by a `README.md` file which contains details about the design
 and purpose of your chat bot, with a yaml header in the following format:
@@ -49,7 +52,7 @@ size). This includes for example,
   - A log of a given Twitter user's tweets
 
 However, this would *exclude* any data that is not freely available or cannot be readily inspected
-by others, such as:
+by others, such as,
 
   - [IBM's Watson][4] or other closed-source or cloud-hosted AI.
   - [Mechanical Turk][5]-type solutions that offload work to human.
@@ -62,8 +65,6 @@ explain how each library is used by your bot.
 
 Your chat bot must identify itself as a bot using the `+B` user mode, must avoid spamming users or
 channels, and it should try to avoid getting into an infinite loop chatting with other bots.
-
-See the the [ELIZA](bots/eliza/README) sample bot.
 
 ### Utilities
 

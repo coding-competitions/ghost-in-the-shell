@@ -8,6 +8,8 @@ lang: Node.js
 ELIZA, your personal digital therapist. This is a recreation of one the first conversational agents
 ever written. 
 
+![Image of Eliza](avatar.png)
+
 > ELIZA is an early natural language processing computer program created from 1964 to 1966 at the
 > MIT Artificial Intelligence Laboratory by Joseph Weizenbaum. Created to demonstrate the
 > superficiality of communication between humans and machines, Eliza simulated conversation by
