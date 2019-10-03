@@ -39,6 +39,8 @@ and purpose of your chatbot, with a yaml header in the following format:
 
     { description of various components / tools used }
 
+See the the [ELIZA](_bots/eliza/README) sample bot.
+
 You may use any word lists / lexicons / corpora data you like to parse inputs or construct
 responses, but all data used must be freely available and open to inspection by others by download,
 or the data must be included as source code in the submission (and should be kept to a reasonable
